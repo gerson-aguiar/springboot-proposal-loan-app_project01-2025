@@ -10,3 +10,25 @@ Credity Company - System Design
   spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
   https://github.com/gerssonmg/system-design/blob/main/SpringBoot/Hibernate/hibernate-001.md
+
+ToDo:
+https://loggi.udemy.com/course/microsservicos-com-spring-e-rabbitmq-aws/learn/lecture/41984376#overview
+
+Meta hoje:
+Terminar o Curso da Udemy
+
+Ate quarta-feira:
+Tudo em Deploy na AWS
+
+Ate Sexta-feira:
+Tudo de Observabilidade: Prometheus, Grafana.
+Em produção
+
+
+Ate Sabado:
+- Apps em Produção
+- CI/CD
+- Banco de Dados
+- Queue/RabbitMQ
+- Notification by E-mail
+
