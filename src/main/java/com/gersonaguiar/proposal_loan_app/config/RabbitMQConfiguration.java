@@ -1,7 +1,6 @@
 package com.gersonaguiar.proposal_loan_app.config;
 
-import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.core.QueueBuilder;
+import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -40,5 +39,25 @@ public class RabbitMQConfiguration {
     @Bean
     public ApplicationListener<ApplicationReadyEvent> initialize(RabbitAdmin rabbitAdmin) {
         return event -> rabbitAdmin.initialize();
+    }
+
+    @Bean
+    public FanoutExchange fanoutExchangeProposalPending() {
+        return ExchangeBuilder.fanoutExchange("proposal-pending.exchange").build();
+    }
+
+    @Bean
+    public Binding bindingProposalPendindMsCreditAnalysis() {
+        return BindingBuilder.bind(makeQueueProposalPendindMsCreditAnalysis()).to(fanoutExchangeProposalPending());
+    }
+
+    @Bean
+    public FanoutExchange fanoutExchangeProposalNotification() {
+        return ExchangeBuilder.fanoutExchange("proposal-pending.exchange").build();
+    }
+
+    @Bean
+    public Binding bindingProposalPendindMsNotification() {
+        return BindingBuilder.bind(makeQueueProposalPendindMsNotification()).to(fanoutExchangeProposalNotification());
     }
 }
