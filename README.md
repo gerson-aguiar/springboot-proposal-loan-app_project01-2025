@@ -25,10 +25,25 @@ Tudo de Observabilidade: Prometheus, Grafana.
 Em produção
 
 
-Ate Sabado:
-- Apps em Produção
-- CI/CD
-- Banco de Dados
-- Queue/RabbitMQ
-- Notification by E-mail
+Hoje 14/02/2025:
+- RabbitMQ
+
+#### Local Environment:
+
+- Application Spring Boot | Run by IntelliJ
+- - http://localhost:8080/
+
+- PostgreSQL (run with docker the Windows)
+- - http://localhost:5432/
+
+- RabbitMQ   (run with docker the Windows)
+- - http://localhost:15672
+- - - user: guest
+- - - password: guest
+
+- Prometheus | This repository exist docker-compose -> docker-compose up
+- - http://localhost:9090/
+
+- Grafana    | This repository exist docker-compose -> docker-compose up
+- - http://localhost:3000/
 
