@@ -20,4 +20,6 @@ public class ProposalRequestDto {
     private String requestValue;
 
     private String deadlinePayment;
+
+    private String note;
 }

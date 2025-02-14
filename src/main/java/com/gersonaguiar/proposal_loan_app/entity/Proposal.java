@@ -24,4 +24,60 @@ public class Proposal {
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Double getExpectedValue() {
+        return expectedValue;
+    }
+
+    public void setExpectedValue(Double expectedValue) {
+        this.expectedValue = expectedValue;
+    }
+
+    public int getPaymentDeadline() {
+        return paymentDeadline;
+    }
+
+    public void setPaymentDeadline(int paymentDeadline) {
+        this.paymentDeadline = paymentDeadline;
+    }
+
+    public Boolean getConfirmed() {
+        return confirmed;
+    }
+
+    public void setConfirmed(Boolean confirmed) {
+        this.confirmed = confirmed;
+    }
+
+    public boolean isIntegrated() {
+        return integrated;
+    }
+
+    public void setIntegrated(boolean integrated) {
+        this.integrated = integrated;
+    }
+
+    public String getNote() {
+        return this.note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
