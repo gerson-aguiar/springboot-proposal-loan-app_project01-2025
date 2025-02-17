@@ -1,5 +1,6 @@
 package com.gersonaguiar.proposal_loan_app.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,12 +18,13 @@ public class Proposal {
 
     private Boolean confirmed;
 
-    private boolean integrated;
+    private boolean integrated = false;
 
     private String note;
 
     @OneToOne
     @JoinColumn(name = "user_id")
+//    @JsonManagedReference
     private User user;
 
     public Long getId() {

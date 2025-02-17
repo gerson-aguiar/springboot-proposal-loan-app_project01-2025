@@ -1,5 +1,6 @@
 package com.gersonaguiar.proposal_loan_app.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -15,15 +16,15 @@ public class User {
 
     @Column(name = "last_name")
     private String lastName;
-
-
+    
     private String cpf;
 
-    @Column(name="phone_number")
+    @Column(name = "phone_number")
     private String phoneNumber;
 
     private Double income;
 
     @OneToOne(mappedBy = "user")
+//    @JsonBackReference
     private Proposal proposal;
 }
